@@ -1,0 +1,9 @@
+<div 
+  class="recipe"
+  [ngClass]="{'opacity': opacity}"
+  [ngStyle]="{'background-image': 'url(../../assets/images/rubik_cube.jpg)'}"
+  (mouseover)="onMouseOver()"
+  (mouseleave)="onMouseLeave()"
+  routerLink="/recipe/{{title}}">
+  <p class="recipe__title">{{title}}</p>
+</div>

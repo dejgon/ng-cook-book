@@ -1,0 +1,18 @@
+.recipe {
+    width: 350px;
+    height: 350px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-image: none;
+}
+.recipe__title {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+.opacity {
+    opacity: 0.3;
+}
