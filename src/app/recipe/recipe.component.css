@@ -1,4 +1,7 @@
 .recipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 350px;
     height: 350px;
     border-width: 2px;
@@ -14,5 +17,14 @@
     margin-top: 10px;
 }
 .opacity {
-    opacity: 0.3;
+    opacity: 1;
+}
+.hover {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/transparent.png');
+    margin: 10px;
+}
+.title {
+    font-family: 'Montserrat';
 }

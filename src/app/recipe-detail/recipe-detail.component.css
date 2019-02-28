@@ -1,0 +1,48 @@
+.container {
+    font-family: 'Montserrat';
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.title {
+    margin-top: 10px;
+}
+.image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 0.75rem lightgrey);
+}
+.ingredients {
+    flex: 0.25;
+    
+}
+.recipe-top {
+    text-align: center;
+}
+.ingredients-title {
+    text-align: center;
+    font-weight: bold;
+}
+.steps {
+    flex: 0.75;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+    
+}
+.tags {
+
+}
+li {
+    list-style-type: none;
+}
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+}

@@ -8,7 +8,7 @@ import { Component, OnInit, Input} from '@angular/core';
 export class RecipeComponent implements OnInit {
 
   @Input() title: string;
-  @Input() opacity: boolean;
+  opacity: boolean = false;
   constructor() { }
 
   ngOnInit() {
