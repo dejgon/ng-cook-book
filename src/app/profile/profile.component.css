@@ -1,0 +1,51 @@
+.profilePic {
+    width: 150px;
+    height: 150px;
+}
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    font-family: 'Montserrat';
+    flex-wrap: wrap;
+}
+.sidebar {
+    display: flex;
+    flex: 0.15;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid lightgrey;
+    padding: 5px;
+}
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid lightgrey;
+    padding: 5px;
+}
+.change-prof-picture {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 10px;
+}
+.username {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    font-size: 12px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}

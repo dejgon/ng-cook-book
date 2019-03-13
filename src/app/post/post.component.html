@@ -1,0 +1,8 @@
+<h3>Get configuration from JSON file</h3>
+<div>
+  <button (click)="getPosts()">get</button>
+  <span *ngFor="let item of posts">
+    <p>Title from API is: "{{item.title}}"</p>
+    <p>Content from API is: "{{item.content}}"</p>
+  </span>
+</div>

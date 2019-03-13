@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,9 @@ import { MatChipsModule } from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { ProfileComponent } from './profile/profile.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -22,17 +26,21 @@ import {MatIconModule} from '@angular/material/icon';
     HomeComponent,
     RecipeDetailComponent,
     RecipesComponent,
-    RecipeComponent
+    RecipeComponent,
+    ProfileComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     MatChipsModule,
     MatDividerModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
