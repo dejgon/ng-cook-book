@@ -18,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { PostComponent } from './post/post.component';
+import { RcpComponent } from './rcp/rcp.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PostComponent } from './post/post.component';
     RecipeComponent,
     ProfileComponent,
     PostComponent,
+    RcpComponent,
   ],
   imports: [
     BrowserModule,

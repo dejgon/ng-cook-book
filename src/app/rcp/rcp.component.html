@@ -1,0 +1,15 @@
+<div class="container">
+  <button (click)="getRecipe()">get</button>
+  <h1>{{recipe.name}}</h1>
+  <p>{{recipe.typeOfDishes}}</p>
+  <span *ngFor="let item of recipe.elements">
+    <p>{{item.stepName}}</p>
+    <span *ngFor="let ingr of item.ingredients">
+      <p>{{ingr}}</p>
+    </span>
+    </span>
+    <span>
+      <p>{{recipe.steps[0]}}</p>
+      <p>{{recipe.steps[1]}}</p>
+    </span>
+</div>

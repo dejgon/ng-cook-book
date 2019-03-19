@@ -21,6 +21,7 @@
 .ingredients-title {
     text-align: center;
     font-weight: bold;
+    font-size: 30px;
 }
 .steps {
     flex: 0.75;
@@ -28,6 +29,7 @@
     align-items: center;
     text-align: center;
     text-align: center;
+    padding-left: 10px;
     
 }
 .tags {
@@ -45,4 +47,9 @@ li {
 .buttons {
     display: flex;
     justify-content: flex-start;
+}
+.elem-of-ingr {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }

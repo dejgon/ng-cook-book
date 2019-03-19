@@ -1,9 +1,9 @@
 <div class="container">
 
   <div class="recipe-top">
-    <Img class="image" src="https://www.kwestiasmaku.com/sites/kwestiasmaku.com/files/racuchy_drozdzowe_z_jablkami_00_0.jpg">
-    <h1 class="title">{{title}}</h1>
-    <p>Prosty przepis na pyszne racuchy z jabłkami!</p>
+    <Img class="image" src={{recipe?.img}}>
+    <h1 class="title">{{recipe?.name}}</h1>
+    <p>*- opis przepisu -*</p>
   </div>
 
   <div class="buttons">
@@ -15,8 +15,9 @@
   <div class="tags">
     <p>Tagi:</p>
     <mat-chip-list>
-      <mat-chip>marchew</mat-chip>
-      <mat-chip>jabłka</mat-chip>
+      <div *ngFor="let tag of recipe?.tags">
+          <mat-chip>{{tag}}</mat-chip>
+      </div>
     </mat-chip-list>
     <br>
     <mat-divider></mat-divider>
@@ -27,31 +28,24 @@
 
   <div class="ingredients">
     <p class="ingredients-title">SKŁADNIKI</p>
-    <ul>
-      <li>Marchewka</li>
-      <mat-divider></mat-divider>
-      <li>Marchewka</li>
-      <mat-divider></mat-divider>
-      <li>Marchewka</li>
-      <mat-divider></mat-divider>
-      <li>Marchewka</li>
-      <mat-divider></mat-divider>
-    </ul>
+    <div *ngFor="let elem of recipe?.elements">
+        <p class="elem-of-ingr">{{elem.stepName}}</p>
+        <div *ngFor="let ingr of elem?.ingredients">
+            <ul>
+                <li>{{ingr}}</li>
+                <mat-divider></mat-divider>
+              </ul>
+        </div>
+    </div>
+    
+    
   </div>
 
   <div class="steps">
-    <h2>Krok pierwszy:</h2>
-    <p>Pokrój marchewke w małe plastry</p>
-
-    <h2>Krok:</h2>
-    <p>dlaksjdlkashdkajsdskhjh</p>
-
-    <h2>Krok:</h2>
-    <p>Pokrój marchewke w małe plastry</p>
-
-    <h2>Krok:</h2>
-    <p>dlaksjdlkashdkajsdskhjh</p>
-
+    <div *ngFor="let step of recipe?.steps, let i=index">
+        <h2>Krok {{i+1}}:</h2>
+        <p>{{step}}</p>
+    </div>
   </div>
 </div>
 </div>

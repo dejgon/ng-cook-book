@@ -4,24 +4,33 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Post } from '../_models/post';
+import { Recipe } from '../_models/recipe';
+import { getAllDebugNodes } from '@angular/core/src/debug/debug_node';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
 @Injectable({ providedIn: 'root' })
-export class PostService {
-    private postsUrl = 'http://localhost:8000/posts/getAll';
+export class RecipesService {
+    private postsUrl = 'http://localhost:8000/recipes/';
 
     constructor(
         private http: HttpClient,
     ) {}
 
-    getPosts(): Observable<Post[]> {
-        return this.http.get<Post[]>(this.postsUrl)
+    getRecipe(id: string): Observable<Recipe[]> {
+        const url = `${this.postsUrl}/${id}`;
+        return this.http.get<Recipe[]>(url)
             .pipe(
-                catchError(this.handleError('getPosts', []))
+                catchError(this.handleError('getRecipe', []))
+            );
+    }
+    getAllRecipes(): Observable<Recipe[]> {
+      const url = `${this.postsUrl}getAll`;
+      return this.http.get<Recipe[]>(url)
+            .pipe(
+                catchError(this.handleError('getAllRecipes', []))
             );
     }
     private handleError<T>(operation = 'operation', result?: T) {

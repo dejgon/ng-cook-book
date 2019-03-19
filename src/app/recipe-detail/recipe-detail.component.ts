@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, NgModule } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { RecipesService } from '../_services/recipes.service';
+import { Recipe } from '../_models/recipe';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -9,19 +11,23 @@ import { Location } from '@angular/common';
 })
 
 export class RecipeDetailComponent implements OnInit {
-
-  @Input() title: string;
+  recipe: Recipe[];
+  @Input() id: string;
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private recipesService: RecipesService
   ) { }
-
   ngOnInit() {
     this.getRecipe();
+    console.log(this.id);
+    console.log(this.recipe);
   }
   getRecipe(): void {
-    const title = this.route.snapshot.paramMap.get('title');
-    this.title = title;
+    const id = this.route.snapshot.paramMap.get('id');
+    this.id = id;
+    this.recipesService.getRecipe(this.id)
+    .subscribe(recipe => this.recipe = recipe);
   }
 }

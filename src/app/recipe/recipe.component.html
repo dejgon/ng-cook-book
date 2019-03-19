@@ -1,12 +1,12 @@
 <div 
   class="recipe"
   [ngClass]="{'opacity': opacity}"
-  [ngStyle]="{'background-image': 'url(../../assets/images/rubik_cube.jpg)'}"
+  [ngStyle]="{'background-image': 'url('+ recipe?.thumbnail +')'}"
   (mouseover)="onMouseOver()"
   (mouseleave)="onMouseLeave()"
-  routerLink="/recipe/{{title}}">
+  routerLink="/recipe/{{id}}">
   <div *ngIf="opacity" class="hover">
-    <h2>{{title}}</h2>
+    <h2>{{recipe?.name}}</h2>
   </div>
 </div>
 
